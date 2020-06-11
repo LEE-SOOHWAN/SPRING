@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="pc" class="com.care.ex03.PrintClass"/>
+	<bean id="sc" class="com.care.ex03.SaveClass">
+		<property name="pc" ref="pc"/>
+		<property name="name" value="길길길"/>
+		<property name="hobby">
+			<list>
+				<value>수영</value><value>요리</value>
+			</list>
+		</property>
+		<property name="weather">
+			<map>
+				<entry key="오늘" value="좀 괜찬아..."/>
+				<entry key="내일" value="그냥 덥다"/>
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="sc01" class="com.care.ex03.SaveClass">
+		<property name="pc" ref="pc"/>
+		<constructor-arg value="생성자 홍길동"/>
+		<constructor-arg>
+			<list>
+				<value>생성자 수영</value><value>생성자 배영</value>
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<map>
+				<entry key="오늘" value="생성자 비가??"/>
+				<entry key="내일" value="생성자 덥다"/>
+			</map>
+		</constructor-arg>
+	</bean>
+
+</beans>
