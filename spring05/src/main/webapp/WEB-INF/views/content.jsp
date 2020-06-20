@@ -23,6 +23,7 @@
 	<tr>
 		<td colspan="2">
 			<a href="save_view">등록</a>
+			총글: ${count }
 		</td>
 	</tr>
 </table>

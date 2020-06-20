@@ -154,10 +154,16 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 <!--  
       <Context docBase="spring01" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:spring01"/>
--->
       <Context docBase="my-test" path="/c" reloadable="true" source="org.eclipse.jst.jee.server:my-test"/>
       <Context docBase="spring03" path="/mvc_ex04" reloadable="true" source="org.eclipse.jst.jee.server:spring03"/>
-      </Host>
+      <Context docBase="spring04" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:spring04"/>
+      <Context docBase="spring05" path="/controller02" reloadable="true" source="org.eclipse.jst.jee.server:spring05"/>
+      <Context docBase="spring_board" path="/controller03" reloadable="true" source="org.eclipse.jst.jee.server:spring_board"/>
+      <Context docBase="spring06" path="/transaction_ex01" reloadable="true" source="org.eclipse.jst.jee.server:spring06"/> 
+      <Context docBase="Transaction_Quiz" path="/transaction02" reloadable="true" source="org.eclipse.jst.jee.server:Transaction_Quiz"/>
+      <Context docBase="spring07" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:spring07"/>
+-->
+      <Context docBase="spring08" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:spring08"/></Host>
     </Engine>
   </Service>
 </Server>

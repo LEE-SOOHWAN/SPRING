@@ -14,5 +14,6 @@ public class JdbcContentServiceImpl implements JdbcService {
 		JdbcDAO dao = new JdbcDAO();
 		ArrayList<JdbcDTO> list = dao.list();
 		model.addAttribute("list", list);
+		model.addAttribute("count", dao.count());
 	}
 }
