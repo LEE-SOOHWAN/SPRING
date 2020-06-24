@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<bean id="common" class="com.care.ex01.CommonClass"/>
+	<aop:config>
+		<aop:aspect id="comService" ref="common">
+			<aop:pointcut id="comSerImpl" expression="within(com.care.ex01.CoreClass)"/>
+			<!-- pointcut은 범위를 지정 -->
+			<aop:around pointcut-ref="comSerImpl" method="commonAop"/>
+			<!-- around는 해당 클래스(com.care.ex01.CoreClass) 동작 전과 동작 후에 실행 -->
+		</aop:aspect>
+	</aop:config>
+	<bean id="core" class="com.care.ex01.CoreClass"/>
+</beans>

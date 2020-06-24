@@ -158,12 +158,15 @@
       <Context docBase="spring03" path="/mvc_ex04" reloadable="true" source="org.eclipse.jst.jee.server:spring03"/>
       <Context docBase="spring04" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:spring04"/>
       <Context docBase="spring05" path="/controller02" reloadable="true" source="org.eclipse.jst.jee.server:spring05"/>
-      <Context docBase="spring_board" path="/controller03" reloadable="true" source="org.eclipse.jst.jee.server:spring_board"/>
       <Context docBase="spring06" path="/transaction_ex01" reloadable="true" source="org.eclipse.jst.jee.server:spring06"/> 
       <Context docBase="Transaction_Quiz" path="/transaction02" reloadable="true" source="org.eclipse.jst.jee.server:Transaction_Quiz"/>
       <Context docBase="spring07" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:spring07"/>
+      <Context docBase="spring_board" path="/controller03" reloadable="true" source="org.eclipse.jst.jee.server:spring_board"/>
+      <Context docBase="spring08" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:spring08"/>
 -->
-      <Context docBase="spring08" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:spring08"/></Host>
+      <Context docBase="spring09" path="/ex01" reloadable="true" source="org.eclipse.jst.jee.server:spring09"/>
+      <Context docBase="spring_board2" path="/board" reloadable="true" source="org.eclipse.jst.jee.server:spring_board2"/>
+      <Context docBase="spring10" path="/controller" reloadable="true" source="org.eclipse.jst.jee.server:spring10"/></Host>
     </Engine>
   </Service>
 </Server>

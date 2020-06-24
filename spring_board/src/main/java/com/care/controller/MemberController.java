@@ -11,10 +11,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.care.member_dao.MemberDAO;
+import com.care.member_service.BoardContentViewServiceImpl;
 import com.care.member_service.CheckServiceImpl;
+import com.care.member_service.Check_ModifyServiceImpl;
 import com.care.member_service.ContentViewServiceImpl;
 import com.care.member_service.JoinServiceImpl;
 import com.care.member_service.MemberService;
+import com.care.member_service.Write_SaveServiceImpl;
 import com.care.template.Constant;
 
 @Controller
@@ -70,6 +73,30 @@ public class MemberController {
 	@RequestMapping("member_info2")
 	public String member_info2(Model model)	{
 		return "member/member_info2";
+	}
+	@RequestMapping("board")
+	public String board(Model model) {
+		jdbc =  new BoardContentViewServiceImpl();
+		jdbc.execute(model);
+		return "member/board";
+	}
+	@RequestMapping("write")
+	public String write() {
+		return "member/write";
+	}
+	@RequestMapping("save_write")
+	public String save_write(Model model, HttpServletRequest request) {
+		model.addAttribute("request", request);
+		jdbc = new Write_SaveServiceImpl();
+		jdbc.execute(model);
+		return "member/board";
+	}
+	@RequestMapping("modify")
+	public String modify(Model model, HttpServletRequest request) {
+		model.addAttribute("request", request);
+		jdbc = new Check_ModifyServiceImpl();
+		jdbc.execute(model);
+		return "member/modify";
 	}
 	
 }
